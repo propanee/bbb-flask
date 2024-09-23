@@ -19,4 +19,4 @@ def show_image():
     return render_template('index.html', image_file=url_for('static', filename='images/Blockchain Structure.gv.svg'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080)
