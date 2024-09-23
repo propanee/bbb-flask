@@ -1,0 +1,37 @@
+#image-container {
+    width: 600px;
+    height: 400px;
+    overflow: hidden; /* 隐藏超出部分 */
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+#image {
+    width: 100%;
+    position: absolute;
+    cursor: grab;
+    user-select: none; /* 防止拖动图片时选中文本 */
+}
+
+/*滚动条样式*/
+.scroll-bar {
+    position: absolute;
+    z-index: 10;
+}
+
+#horizontal-scroll {
+    width: calc(100% - 20px);
+    height: 8px;
+    bottom: 0;
+    left: 10px;
+    background: #f1f1f1;
+}
+
+#vertical-scroll {
+    height: calc(100% - 20px);
+    width: 8px;
+    top: 10px;
+    right: 0;
+    writing-mode: bt-lr;
+    background: #f1f1f1;
+}

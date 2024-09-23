@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Click the button to run BBB protocol</h1>
+    <button onclick="window.location.href='/show_image'">Run BBB</button>
+    <div id="image-container">
+        {% if image_file %}
+            <img id="image" src="{{ image_file }}" alt="Example Image" style="left: 0; top: 0;">
+        {% endif %}
+        <!-- <input id="horizontal-scroll" type="range" min="0" max="100" value="0" class="scroll-bar">
+        <input id="vertical-scroll" type="range" min="0" max="100" value="0" class="scroll-bar vertical"> -->
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+</html>
